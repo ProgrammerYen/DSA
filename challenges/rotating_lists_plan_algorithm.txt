@@ -1,0 +1,10 @@
+We must find the number of time a list was moved forward in a cycle. When doing so, the last value moves to the first 
+position in the list.
+
+Algorithm:
+1. Choose the first value in the initial sorted array
+2. In the new sorted array, we also find the index of the same value and store this in a variable - using the binary search
+ algorithm. The index will always be the same as there are not any repeating values - each value is unique.
+3. To calculate the number of times the initial sorted array was shifted, subract the initial index from the final index. To
+ avoid the initial index being larger than the final index, we must choose the first value of the sorted array and therefore
+  we do not need to deal with the initial index of the first value being greater than the final index.

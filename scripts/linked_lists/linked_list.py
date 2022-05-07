@@ -1,3 +1,6 @@
+from platform import node
+
+
 class Node:
     
     def __init__(self, data):
@@ -76,15 +79,38 @@ class LinkedList:
             
         self.head = prev
         
-
+    
+    def swap_two_vals(self, val1, val2):
+        pos1 = self.get_element_pos(val1)
+        pos2 = self.get_element_pos(val2)
+        
+        curr = self.head
+        count = 0
+        while curr != None:
+            if count == pos1:
+                curr.data = val2 
+                
+            elif count == pos2:
+                curr.data = val1
+                
+            curr = curr.next
+            count += 1 
+            
+            
 linked_list1 = LinkedList()
 linked_list1.push(2)
 linked_list1.push(5)
 linked_list1.push(1)
+linked_list1.push(12)
+linked_list1.push(13)
 
 print(linked_list1.show_llist())
 linked_list1.reverse()
 print(linked_list1.show_llist())
 
 print(linked_list1.get_element_pos(1))
+
 print(linked_list1.length_llist())
+
+linked_list1.swap_two_vals(2,5)
+print(linked_list1.show_llist())

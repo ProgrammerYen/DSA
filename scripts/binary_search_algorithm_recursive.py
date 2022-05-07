@@ -1,5 +1,5 @@
 from binary_search_algorithm_iterative import test_repeating_values
-from test_cases_search_algorithms import tests
+from scripts.test_cases_search_algorithms import tests
 
 
 def locate_card_recursive(cards, query, high, low):

@@ -1,4 +1,4 @@
-from test_cases_search_algorithms import tests
+from scripts.test_cases_search_algorithms import tests
 
 # Recursive function
 def test_repeating_values(cards, ind, query): 

@@ -1,4 +1,4 @@
-from test_cases_search_algorithms import tests
+from scripts.test_cases_search_algorithms import tests
 
 
 def locate_card(cards, query):

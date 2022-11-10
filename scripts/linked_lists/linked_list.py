@@ -14,7 +14,7 @@ class LinkedList:
         
     
     def push(self, val):
-        """Adds a new value to a linked list"""
+        # appends a new value to a linked list
         if self.head == None:
             self.head = Node(val)
             
@@ -27,7 +27,7 @@ class LinkedList:
             
             
     def show_llist(self):
-        """Presents the linked list values"""
+        # presents the linked list values
         curr = self.head
         llist = []
         while curr != None:
@@ -38,7 +38,7 @@ class LinkedList:
             
     
     def length_llist(self):
-        """Finds the length of the linked list"""
+        # finds the length of the linked list
         curr = self.head
         count = 0
         while curr != None:
@@ -49,6 +49,7 @@ class LinkedList:
     
     
     def get_element_pos(self, element):
+        # returns the index of an element in the linked list
         curr = self.head
         count = 0
         while curr != None:
@@ -73,14 +74,15 @@ class LinkedList:
         while curr != None:
             nxt = curr.next
             curr.next = prev
-            
+                    
             prev = curr
             curr = nxt
             
         self.head = prev
         
-    
+
     def swap_two_vals(self, val1, val2):
+        # swaps the position of two values in the linked list
         pos1 = self.get_element_pos(val1)
         pos2 = self.get_element_pos(val2)
         

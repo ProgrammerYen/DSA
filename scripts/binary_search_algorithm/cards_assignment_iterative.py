@@ -1,4 +1,7 @@
-from scripts.test_cases_search_algorithms import tests
+import sys
+
+sys.path.append("C:/Users/dealw/OneDrive/SoftwareWork/Programming/PythonWork/DataStructuresAndAlgorithms/Scripts/test_cases/")
+from test_cases_search_algorithms import tests
 
 # Recursive function
 def test_repeating_values(cards, ind, query): 
@@ -36,8 +39,7 @@ def locate_card(cards, query): # Time complexity: O(log(n))
         # Returns the index value of the query if the middle value is equal to the query    
         elif mid_val == query:
             repeating_vals = test_repeating_values(cards_decreasing, mid, query)
-            return repeating_vals
-            
+            return repeating_vals  
 
 
 list_test_results = []
